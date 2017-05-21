@@ -9,7 +9,9 @@ define(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
 
         initialize: function () {
             console.log("load view >>> " + this.id);
+
             this.undelegateEvents();
+
             this.$el.empty().off();
 
             this.model = null;
@@ -18,9 +20,10 @@ define(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
                 this.$el.html(this.template);
                 this.template = _.template(this.template);
             }
+
             this.initRouter();
 
-            this.pageInit();
+            this.onPageCreate();
 
             this.delegateEvents();
         },
@@ -29,16 +32,16 @@ define(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
 
         },
 
-        pageInit: function (attrs) {
+        onPageCreate: function (attrs) {
         },
 
-        initPlugins: function () {
+        onPageStart: function () {
         },
 
         render: function () {
             var model = this.model ? this.model.toJSON() : {};
             this.$el.html(this.template(model));
-            this.initPlugins();
+            this.onPageStart();
             return this;
         }
     });
