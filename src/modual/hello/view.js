@@ -16,6 +16,9 @@ define([
 
         onPageCreate: function () {
             this.model = new HelloModel();
+            this.model.set({
+                say: 'Hello World!'
+            });
         },
 
         onPageStart: function () {

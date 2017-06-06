@@ -5,6 +5,10 @@ define(['common/BaseModel'],function(BaseModel) {
 
     var helloModel = BaseModel.extend({
 
+        defaults: {
+            say: ''
+        }
+
         //hello:function(url,callback){
         //    this.sendPOST({
         //        url:url,
