@@ -14,11 +14,11 @@ define([
 
         },
 
-        pageInit: function () {
+        onPageCreate: function () {
             this.model = new HelloModel();
         },
 
-        initPlugins: function () {
+        onPageStart: function () {
 
         }
     });
