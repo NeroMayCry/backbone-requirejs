@@ -1,2 +1,7 @@
 # backbone-requirejs
-Backbone与requirejs相结合使用的快速开发框架，已经对View、Model、Collection和router做了很好的封装，使用时只需要专注于开发页面即可，方便好用。
+
+A quick start framework using Backbone and Requirejs.
+
+It has been packaged with View, Model Collection and Router.You just clone the repo and start coding.
+
+Have fun!
